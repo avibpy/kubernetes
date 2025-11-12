@@ -26,6 +26,7 @@ SILENT=${SILENT:-true}
 ALL=${FORCE_ALL:-false}
 
 trap 'exit 1' SIGINT
+kill SIGINT
 
 if ${SILENT} ; then
 	echo "Running in silent mode, run with SILENT=false if you want to see script logs."
